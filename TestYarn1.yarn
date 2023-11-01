@@ -1,5 +1,6 @@
 title: Party
-color: pink
+color: red
+position: -363,-79
 ---
 <<declare $partyHats = 0>>
 Partygoer A: We're having a party!
@@ -19,7 +20,8 @@ Partygoer A: Want a party hat?
 ===
 
 title: OverHere
-position: -1,-233
+position: -505,-379
+group: other_places
 ---
 Partygoer C: Oh hi. Can I borrow a party hat? 
 Partygoer C: I lost mine.
@@ -38,7 +40,8 @@ Partygoer C: I lost mine.
 ===
 
 title: OverThere
-position: 18,233
+position: -256,-377
+group: other_places
 ---
 Partygoer D: Hi!
 <<if $partyHats > 0 and $partyHats <= 2>>

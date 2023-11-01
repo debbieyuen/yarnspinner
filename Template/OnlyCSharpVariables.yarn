@@ -1,0 +1,16 @@
+title: OnlyCSharpVariables
+---
+// Every time we want to get or change the value of the player coins we ask C#
+// C# manages the variables
+
+The player has {get_player_coins()} coin(s).
+-> I would like another coin please.
+    // The player coins changes as the dialogue changes
+    <<if add_player_coins(1)>>
+        Sure thing, boss.
+    <<else>>
+        Sorry, no can do.
+    <<endif>>
+-> I am happy with my number of coins.
+The player has {get_player_coins()} coins(s).
+===

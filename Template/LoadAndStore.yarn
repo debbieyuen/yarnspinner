@@ -1,0 +1,19 @@
+title: LoadNStore
+---
+// Declare a single variable of type number 
+// Number of coins the player currently has
+<<declare $player_coins = 0 as Number>>>
+
+// Load variables after the declaration of all variables
+// But before the beginning of our dialogue
+<<load_variables>>
+
+The player has {$player_coins} coin(s).
+-> I would like another coin please.
+    // The player coins changes as the dialogue changes
+    <<set $player_coins += 1>>
+-> I am happy with my number of coins.
+The player has {$player_coins} coins(s).
+
+<<store_variables>>
+===

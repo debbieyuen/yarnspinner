@@ -1,0 +1,10 @@
+title: DuplicateVariables
+---
+<<declare $player_coins = 0 as Number>>
+
+The player has {$player_coins} coin(s).
+-> I would like another coin please.
+    <<set $player_coins += 1>>
+-> I am happy with my number of coins.
+The player has {$player_coins} coins(s).
+===
