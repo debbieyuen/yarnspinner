@@ -7,15 +7,7 @@ using Yarn.Unity;
 // so they refer to the same underlying store
 
 public class DuplicateVariables : MonoBehaviour {
-    private CustomVariableStorage variableStorage;
 
     public void Start() {
-        variableStore = GameObject.FindObjectOfType<CustomVariableStorage>();
-    }
-
-    public void AddPlayerCurrency(float amount) {
-        // You are doing the TryGetValue but we aren't responsible for doing that every time
-        // can treat the variableStore as if it's holding locally managed variables
-        variableStore.PlayerCoins += amount;
     }
 }

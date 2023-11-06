@@ -5,7 +5,19 @@ using Yarn.Unity;
 
 public class DuplicationTrap : MonoBehaviour {
 
-    public void Start() {
+    private InMemoryVariableStorage variableStorage;
 
+    // Create a new variable within C# 
+    private float playerCoins;
+    private void Start() {
+        variableStorage = FindObjectOfType<InMemoryVariableStorage>();
+    }
+
+    private void AddPlayerCurrency(float amount) {
+        // Get variable
+        variableStorage.TryGetValue("$player_coins", out playerCoins);
+        // Set variable
+        variableStorage.SetValue("$player_coins", playerCoins);
+        playerCoins += amount;
     }
 }

@@ -6,7 +6,7 @@ using Yarn.Unity;
 // load Yarn variable initial values from C# on startup
 // store values back to C# on shutdown
 
-public class LoadAndSave : MonoBehaviour {
+public class LoadAndStore : MonoBehaviour {
     private DialogueRunner runner;
     private InMemoryVariableStorage variableStore;
 

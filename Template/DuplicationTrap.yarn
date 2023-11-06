@@ -1,0 +1,6 @@
+title: DuplicateTrap
+--- 
+<<declare $player_coins = 0 as Number>>
+
+The player has {$player_coins}
+===

@@ -11,10 +11,7 @@ public class OnlyCSharpVariables : MonoBehaviour {
     private static float playerCoins;
     private static const float maxPlayerCoins = 50;
     public void Start() {
-        // get a handle to the Scene's DialogueRunner
-        // get dialogue runner instead of the variable storage
         runner = GameObject.FindObjectOfType<DialogueRunner>();
-        // add functions that allow getting and changing of this value
         runner.AddFunction<float>("get_player_coins", GetPlayerCoins);
         runner.AddFunction<bool, float>("set_player_coins", SetPlayerCoins);
         runner.AddFunction<bool, float>("add_player_coins", AddPlayerCoins);
@@ -46,19 +43,11 @@ public class OnlyCSharpVariables : MonoBehaviour {
     }
 
     public void AddPlayerCurrency(float amount) {
-        // Use a temporary variable for our TryGetValue function
-        // This is then populated by the TryGetValue function
         float temp;
-        // try to get Yarn variable, else set default settings
         if (!variableStorage.TryGetValue("$player_coins", out temp)) {
             temp = 0;
         }
-        // setYarn variable to updated value
-        // temp variable discarded from C# script
-        // goes away when the function ends - meaning no persistent value whatsoever
         variableStorage.SetValue("$player_coins", temp + amount);
-        // This variable storage is storing this value anyway in a dictionary
-        // or some sort of ariable storage data structure in C#'s memory
     }
 }
 

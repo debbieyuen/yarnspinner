@@ -1,4 +1,4 @@
-title: LoadNStore
+title: LoadAndStore
 ---
 // Declare a single variable of type number 
 // Number of coins the player currently has
